@@ -17,6 +17,11 @@
 		2EC900E316AF003D00DDDAF2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC900C316AF003C00DDDAF2 /* Cocoa.framework */; };
 		2EC900EB16AF003D00DDDAF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EC900E916AF003D00DDDAF2 /* InfoPlist.strings */; };
 		2EC900EE16AF003D00DDDAF2 /* Octopussy_FileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC900ED16AF003D00DDDAF2 /* Octopussy_FileTests.m */; };
+		2EC900F916AF0F2B00DDDAF2 /* ButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC900F816AF0F2B00DDDAF2 /* ButtonRed.png */; };
+		2EC900FF16AF347400DDDAF2 /* button_launch_g.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC900FB16AF347400DDDAF2 /* button_launch_g.png */; };
+		2EC9010016AF347400DDDAF2 /* button_launch_r.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC900FD16AF347400DDDAF2 /* button_launch_r.png */; };
+		2EC9010316AF3C8A00DDDAF2 /* folder_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC9010116AF3C8A00DDDAF2 /* folder_disable.png */; };
+		2EC9010416AF3C8A00DDDAF2 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC9010216AF3C8A00DDDAF2 /* folder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,11 @@
 		2EC900EC16AF003D00DDDAF2 /* Octopussy_FileTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Octopussy_FileTests.h; sourceTree = "<group>"; };
 		2EC900ED16AF003D00DDDAF2 /* Octopussy_FileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Octopussy_FileTests.m; sourceTree = "<group>"; };
 		2EC900F716AF00BE00DDDAF2 /* Octopussy File.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Octopussy File.entitlements"; sourceTree = "<group>"; };
+		2EC900F816AF0F2B00DDDAF2 /* ButtonRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonRed.png; path = Imgs/ButtonRed.png; sourceTree = SOURCE_ROOT; };
+		2EC900FC16AF347400DDDAF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/button_launch_g.png; sourceTree = "<group>"; };
+		2EC900FE16AF347400DDDAF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/button_launch_r.png; sourceTree = "<group>"; };
+		2EC9010116AF3C8A00DDDAF2 /* folder_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder_disable.png; path = Imgs/folder_disable.png; sourceTree = SOURCE_ROOT; };
+		2EC9010216AF3C8A00DDDAF2 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder.png; path = Imgs/folder.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,7 @@
 		2EC900C916AF003C00DDDAF2 /* Octopussy File */ = {
 			isa = PBXGroup;
 			children = (
+				2EC900FA16AF0F3600DDDAF2 /* Imgs */,
 				2EC900F716AF00BE00DDDAF2 /* Octopussy File.entitlements */,
 				2EC900D516AF003C00DDDAF2 /* OFNAppDelegate.h */,
 				2EC900D616AF003C00DDDAF2 /* OFNAppDelegate.m */,
@@ -153,6 +164,18 @@
 				2EC900E916AF003D00DDDAF2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2EC900FA16AF0F3600DDDAF2 /* Imgs */ = {
+			isa = PBXGroup;
+			children = (
+				2EC9010116AF3C8A00DDDAF2 /* folder_disable.png */,
+				2EC9010216AF3C8A00DDDAF2 /* folder.png */,
+				2EC900FB16AF347400DDDAF2 /* button_launch_g.png */,
+				2EC900FD16AF347400DDDAF2 /* button_launch_r.png */,
+				2EC900F816AF0F2B00DDDAF2 /* ButtonRed.png */,
+			);
+			name = Imgs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +253,11 @@
 				2EC900CE16AF003C00DDDAF2 /* InfoPlist.strings in Resources */,
 				2EC900D416AF003C00DDDAF2 /* Credits.rtf in Resources */,
 				2EC900DA16AF003D00DDDAF2 /* MainMenu.xib in Resources */,
+				2EC900F916AF0F2B00DDDAF2 /* ButtonRed.png in Resources */,
+				2EC900FF16AF347400DDDAF2 /* button_launch_g.png in Resources */,
+				2EC9010016AF347400DDDAF2 /* button_launch_r.png in Resources */,
+				2EC9010316AF3C8A00DDDAF2 /* folder_disable.png in Resources */,
+				2EC9010416AF3C8A00DDDAF2 /* folder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +346,22 @@
 				2EC900EA16AF003D00DDDAF2 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2EC900FB16AF347400DDDAF2 /* button_launch_g.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EC900FC16AF347400DDDAF2 /* en */,
+			);
+			name = button_launch_g.png;
+			sourceTree = "<group>";
+		};
+		2EC900FD16AF347400DDDAF2 /* button_launch_r.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EC900FE16AF347400DDDAF2 /* en */,
+			);
+			name = button_launch_r.png;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
