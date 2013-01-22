@@ -88,7 +88,31 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    QString nbproc="0";
+    QString user="None";
+    QString proc="None";
+    QString arch="None";
+    foreach (QString env, QProcess::systemEnvironment())
+    {
+        //qDebug()<<env;
+        if(env.startsWith("NUMBER_OF_PROCESSORS=")) nbproc=env.split("=").at(1);
+        if(env.startsWith("PROCESSOR_IDENTIFIER=")) proc=env.split("=").at(1);
+        if(env.startsWith("PROCESSOR_ARCHITECTURE=")) arch=env.split("=").at(1);
+        if(env.startsWith("USERNAME=")) user=env.split("=").at(1);
+    }
+
+    if(nbproc.toInt()==0){
+        cerr<<"Impossible de déterminer le nombre de processeur..."<<endl;
+        return 1;
+    }
+    cout<<"Votre ordinateur contien "<<qPrintable(nbproc)<<" processeur(s). Ils seront utilisés pour la recherche des fichiers."<<endl;
+    cout<<"Appuyez sur ENTREE pour continuer..."<<endl;
+    cout.flush();
+    cin.ignore(100000,'\n');
+
     OFDiscoverManager m;
+    m.setProcCount(nbproc.toInt());
+
     m.setPathLeft(pathL);
     m.setPathRight(pathR);
     
