@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EC900C416AF003C00DDDAF2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC900C316AF003C00DDDAF2 /* Cocoa.framework */; };
+		2EC900CE16AF003C00DDDAF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EC900CC16AF003C00DDDAF2 /* InfoPlist.strings */; };
+		2EC900D016AF003C00DDDAF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC900CF16AF003C00DDDAF2 /* main.m */; };
+		2EC900D416AF003C00DDDAF2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2EC900D216AF003C00DDDAF2 /* Credits.rtf */; };
+		2EC900D716AF003C00DDDAF2 /* OFNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC900D616AF003C00DDDAF2 /* OFNAppDelegate.m */; };
+		2EC900DA16AF003D00DDDAF2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EC900D816AF003D00DDDAF2 /* MainMenu.xib */; };
+		2EC900E216AF003D00DDDAF2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC900E116AF003D00DDDAF2 /* SenTestingKit.framework */; };
+		2EC900E316AF003D00DDDAF2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC900C316AF003C00DDDAF2 /* Cocoa.framework */; };
+		2EC900EB16AF003D00DDDAF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EC900E916AF003D00DDDAF2 /* InfoPlist.strings */; };
+		2EC900EE16AF003D00DDDAF2 /* Octopussy_FileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC900ED16AF003D00DDDAF2 /* Octopussy_FileTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EC900E416AF003D00DDDAF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EC900B616AF003C00DDDAF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EC900BE16AF003C00DDDAF2;
+			remoteInfo = "Octopussy File";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2EC900BF16AF003C00DDDAF2 /* Octopussy File.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Octopussy File.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC900C316AF003C00DDDAF2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2EC900C616AF003C00DDDAF2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2EC900C716AF003C00DDDAF2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2EC900C816AF003C00DDDAF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2EC900CB16AF003C00DDDAF2 /* Octopussy File-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Octopussy File-Info.plist"; sourceTree = "<group>"; };
+		2EC900CD16AF003C00DDDAF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2EC900CF16AF003C00DDDAF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2EC900D116AF003C00DDDAF2 /* Octopussy File-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Octopussy File-Prefix.pch"; sourceTree = "<group>"; };
+		2EC900D316AF003C00DDDAF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2EC900D516AF003C00DDDAF2 /* OFNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OFNAppDelegate.h; sourceTree = "<group>"; };
+		2EC900D616AF003C00DDDAF2 /* OFNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OFNAppDelegate.m; sourceTree = "<group>"; };
+		2EC900D916AF003D00DDDAF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2EC900E016AF003D00DDDAF2 /* Octopussy FileTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Octopussy FileTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC900E116AF003D00DDDAF2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2EC900E816AF003D00DDDAF2 /* Octopussy FileTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Octopussy FileTests-Info.plist"; sourceTree = "<group>"; };
+		2EC900EA16AF003D00DDDAF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2EC900EC16AF003D00DDDAF2 /* Octopussy_FileTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Octopussy_FileTests.h; sourceTree = "<group>"; };
+		2EC900ED16AF003D00DDDAF2 /* Octopussy_FileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Octopussy_FileTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EC900BC16AF003C00DDDAF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC900C416AF003C00DDDAF2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EC900DC16AF003D00DDDAF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC900E216AF003D00DDDAF2 /* SenTestingKit.framework in Frameworks */,
+				2EC900E316AF003D00DDDAF2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EC900B416AF003C00DDDAF2 = {
+			isa = PBXGroup;
+			children = (
+				2EC900C916AF003C00DDDAF2 /* Octopussy File */,
+				2EC900E616AF003D00DDDAF2 /* Octopussy FileTests */,
+				2EC900C216AF003C00DDDAF2 /* Frameworks */,
+				2EC900C016AF003C00DDDAF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EC900C016AF003C00DDDAF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EC900BF16AF003C00DDDAF2 /* Octopussy File.app */,
+				2EC900E016AF003D00DDDAF2 /* Octopussy FileTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EC900C216AF003C00DDDAF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EC900C316AF003C00DDDAF2 /* Cocoa.framework */,
+				2EC900E116AF003D00DDDAF2 /* SenTestingKit.framework */,
+				2EC900C516AF003C00DDDAF2 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EC900C516AF003C00DDDAF2 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EC900C616AF003C00DDDAF2 /* AppKit.framework */,
+				2EC900C716AF003C00DDDAF2 /* CoreData.framework */,
+				2EC900C816AF003C00DDDAF2 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2EC900C916AF003C00DDDAF2 /* Octopussy File */ = {
+			isa = PBXGroup;
+			children = (
+				2EC900D516AF003C00DDDAF2 /* OFNAppDelegate.h */,
+				2EC900D616AF003C00DDDAF2 /* OFNAppDelegate.m */,
+				2EC900D816AF003D00DDDAF2 /* MainMenu.xib */,
+				2EC900CA16AF003C00DDDAF2 /* Supporting Files */,
+			);
+			path = "Octopussy File";
+			sourceTree = "<group>";
+		};
+		2EC900CA16AF003C00DDDAF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EC900CB16AF003C00DDDAF2 /* Octopussy File-Info.plist */,
+				2EC900CC16AF003C00DDDAF2 /* InfoPlist.strings */,
+				2EC900CF16AF003C00DDDAF2 /* main.m */,
+				2EC900D116AF003C00DDDAF2 /* Octopussy File-Prefix.pch */,
+				2EC900D216AF003C00DDDAF2 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2EC900E616AF003D00DDDAF2 /* Octopussy FileTests */ = {
+			isa = PBXGroup;
+			children = (
+				2EC900EC16AF003D00DDDAF2 /* Octopussy_FileTests.h */,
+				2EC900ED16AF003D00DDDAF2 /* Octopussy_FileTests.m */,
+				2EC900E716AF003D00DDDAF2 /* Supporting Files */,
+			);
+			path = "Octopussy FileTests";
+			sourceTree = "<group>";
+		};
+		2EC900E716AF003D00DDDAF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EC900E816AF003D00DDDAF2 /* Octopussy FileTests-Info.plist */,
+				2EC900E916AF003D00DDDAF2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EC900BE16AF003C00DDDAF2 /* Octopussy File */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EC900F116AF003D00DDDAF2 /* Build configuration list for PBXNativeTarget "Octopussy File" */;
+			buildPhases = (
+				2EC900BB16AF003C00DDDAF2 /* Sources */,
+				2EC900BC16AF003C00DDDAF2 /* Frameworks */,
+				2EC900BD16AF003C00DDDAF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Octopussy File";
+			productName = "Octopussy File";
+			productReference = 2EC900BF16AF003C00DDDAF2 /* Octopussy File.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2EC900DF16AF003D00DDDAF2 /* Octopussy FileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EC900F416AF003D00DDDAF2 /* Build configuration list for PBXNativeTarget "Octopussy FileTests" */;
+			buildPhases = (
+				2EC900DB16AF003D00DDDAF2 /* Sources */,
+				2EC900DC16AF003D00DDDAF2 /* Frameworks */,
+				2EC900DD16AF003D00DDDAF2 /* Resources */,
+				2EC900DE16AF003D00DDDAF2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EC900E516AF003D00DDDAF2 /* PBXTargetDependency */,
+			);
+			name = "Octopussy FileTests";
+			productName = "Octopussy FileTests";
+			productReference = 2EC900E016AF003D00DDDAF2 /* Octopussy FileTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EC900B616AF003C00DDDAF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OFN;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Jean-Baptiste Nahan";
+			};
+			buildConfigurationList = 2EC900B916AF003C00DDDAF2 /* Build configuration list for PBXProject "Octopussy File" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2EC900B416AF003C00DDDAF2;
+			productRefGroup = 2EC900C016AF003C00DDDAF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EC900BE16AF003C00DDDAF2 /* Octopussy File */,
+				2EC900DF16AF003D00DDDAF2 /* Octopussy FileTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EC900BD16AF003C00DDDAF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC900CE16AF003C00DDDAF2 /* InfoPlist.strings in Resources */,
+				2EC900D416AF003C00DDDAF2 /* Credits.rtf in Resources */,
+				2EC900DA16AF003D00DDDAF2 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EC900DD16AF003D00DDDAF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC900EB16AF003D00DDDAF2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EC900DE16AF003D00DDDAF2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EC900BB16AF003C00DDDAF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC900D016AF003C00DDDAF2 /* main.m in Sources */,
+				2EC900D716AF003C00DDDAF2 /* OFNAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EC900DB16AF003D00DDDAF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC900EE16AF003D00DDDAF2 /* Octopussy_FileTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2EC900E516AF003D00DDDAF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EC900BE16AF003C00DDDAF2 /* Octopussy File */;
+			targetProxy = 2EC900E416AF003D00DDDAF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2EC900CC16AF003C00DDDAF2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EC900CD16AF003C00DDDAF2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2EC900D216AF003C00DDDAF2 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EC900D316AF003C00DDDAF2 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2EC900D816AF003D00DDDAF2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EC900D916AF003D00DDDAF2 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		2EC900E916AF003D00DDDAF2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EC900EA16AF003D00DDDAF2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EC900EF16AF003D00DDDAF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2EC900F016AF003D00DDDAF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2EC900F216AF003D00DDDAF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Octopussy File/Octopussy File-Prefix.pch";
+				INFOPLIST_FILE = "Octopussy File/Octopussy File-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2EC900F316AF003D00DDDAF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Octopussy File/Octopussy File-Prefix.pch";
+				INFOPLIST_FILE = "Octopussy File/Octopussy File-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2EC900F516AF003D00DDDAF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Octopussy File.app/Contents/MacOS/Octopussy File";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Octopussy File/Octopussy File-Prefix.pch";
+				INFOPLIST_FILE = "Octopussy FileTests/Octopussy FileTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2EC900F616AF003D00DDDAF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Octopussy File.app/Contents/MacOS/Octopussy File";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Octopussy File/Octopussy File-Prefix.pch";
+				INFOPLIST_FILE = "Octopussy FileTests/Octopussy FileTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EC900B916AF003C00DDDAF2 /* Build configuration list for PBXProject "Octopussy File" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC900EF16AF003D00DDDAF2 /* Debug */,
+				2EC900F016AF003D00DDDAF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EC900F116AF003D00DDDAF2 /* Build configuration list for PBXNativeTarget "Octopussy File" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC900F216AF003D00DDDAF2 /* Debug */,
+				2EC900F316AF003D00DDDAF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2EC900F416AF003D00DDDAF2 /* Build configuration list for PBXNativeTarget "Octopussy FileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC900F516AF003D00DDDAF2 /* Debug */,
+				2EC900F616AF003D00DDDAF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EC900B616AF003C00DDDAF2 /* Project object */;
+}
