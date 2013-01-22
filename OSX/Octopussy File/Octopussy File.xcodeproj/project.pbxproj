@@ -49,6 +49,7 @@
 		2EC900EA16AF003D00DDDAF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2EC900EC16AF003D00DDDAF2 /* Octopussy_FileTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Octopussy_FileTests.h; sourceTree = "<group>"; };
 		2EC900ED16AF003D00DDDAF2 /* Octopussy_FileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Octopussy_FileTests.m; sourceTree = "<group>"; };
+		2EC900F716AF00BE00DDDAF2 /* Octopussy File.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Octopussy File.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +115,7 @@
 		2EC900C916AF003C00DDDAF2 /* Octopussy File */ = {
 			isa = PBXGroup;
 			children = (
+				2EC900F716AF00BE00DDDAF2 /* Octopussy File.entitlements */,
 				2EC900D516AF003C00DDDAF2 /* OFNAppDelegate.h */,
 				2EC900D616AF003C00DDDAF2 /* OFNAppDelegate.m */,
 				2EC900D816AF003D00DDDAF2 /* MainMenu.xib */,
@@ -377,10 +379,13 @@
 		2EC900F216AF003D00DDDAF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Octopussy File/Octopussy File.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Octopussy File/Octopussy File-Prefix.pch";
 				INFOPLIST_FILE = "Octopussy File/Octopussy File-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -389,10 +394,13 @@
 		2EC900F316AF003D00DDDAF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Octopussy File/Octopussy File.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Octopussy File/Octopussy File-Prefix.pch";
 				INFOPLIST_FILE = "Octopussy File/Octopussy File-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
