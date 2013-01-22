@@ -17,8 +17,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     offile.cpp \
-    ofdiscover.cpp
+    ofdiscover.cpp \
+    ofdiscovermanager.cpp
 
 HEADERS += \
     offile.h \
-    ofdiscover.h
+    ofdiscover.h \
+    ofdiscovermanager.h
