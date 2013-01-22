@@ -1,7 +1,7 @@
 #ifndef OFFILE_H
 #define OFFILE_H
 
-#include <QObject>
+#include <QtCore>
 
 #define OF_SAME_NAME 1
 #define OF_SAME_DATE 2
@@ -12,23 +12,19 @@ struct OFSameFile {
     int type;
 };
 
-class OFFile : public QObject
+class OFFile
 {
-    Q_OBJECT
+    //Q_OBJECT
     QString path;
     bool compared;
     QList<OFSameFile> sameList;
 public:
-    explicit OFFile(QObject *parent = 0);
+    explicit OFFile();
     void addSame(QString path, int same);
     void setPath(QString path);
     QString getPath();
     void setCompared();
     bool isCompared();
-    
-signals:
-    
-public slots:
     
 };
 

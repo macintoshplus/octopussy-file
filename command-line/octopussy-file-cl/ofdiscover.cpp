@@ -56,35 +56,35 @@ void OFDiscover::run(){
         }
         //Traitement d'un dossier
         QString p=this->pathFolder.dequeue();
-        mutex.unlock();
-        cout << "Tratement chemin : " << p.toStdString();
+        this->mutex.unlock();
+        cout << "Tratement chemin : " << qPrintable(p) <<endl;
         //Parcour du dossier
         QDir dir(p);
 
-        mutex.lock();
+        this->mutex.lock();
         if(discoveFile)
         foreach(QString f, dir.entryList(QDir::Files)){
-            mutex.unlock();
-            OFFile off();
+            this->mutex.unlock();
+            OFFile off;
             off.setPath(QFileInfo(dir,f).absoluteFilePath());
             this->mutex.lock();
             this->file.append(off);
             this->mutex.unlock();
         }
-        mutex.unlock();
+        this->mutex.unlock();
         //Ajoute les dossiers dans la liste des dossiers à traiter
-        foreach(QStrinf f, dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot)){
+        foreach(QString f, dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot)){
             this->setPath(QFileInfo(dir,f).absoluteFilePath());
-            mutex.lock();
+            this->mutex.lock();
             if(discoveFolder){ //ajoute les dossiers à la listes des fichiers à comparer
-                mutex.unlock();
-                OFFile off();
+                this->mutex.unlock();
+                OFFile off;
                 off.setPath(QFileInfo(dir,f).absoluteFilePath());
                 this->mutex.lock();
                 this->file.append(off);
                 this->mutex.unlock();
             }
-            mutex.unlock();
+            this->mutex.unlock();
         }
     }
     this->stopped=false;

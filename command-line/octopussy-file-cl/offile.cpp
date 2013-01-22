@@ -1,7 +1,8 @@
 #include "offile.h"
 
-OFFile::OFFile(QObject *parent) :
-    QObject(parent)
+/*OFFile::OFFile(QObject *parent) :
+    QObject(parent)*/
+OFFile::OFFile()
 {
     this->path="";
     this->compared=false;
@@ -15,13 +16,15 @@ void OFFile::addSame(QString path, int same)
         for(int i=0;i>this->sameList.count();i++){
             if(this->sameList.at(i).path==path){
                 //Mise à jour de same
-                this->sameList.at(i).type=same;
+                OFSameFile sd=this->sameList.at(i);
+                sd.type=same;
+                this->sameList.replace(i, sd);
                 return;
             }
         }
     }
     //Si inexistant ou liste vide, ajout du fichier
-    OFSameFile s=new OFSameFile();
+    OFSameFile s;
     s.path=path;
     s.type=same;
     this->sameList.append(s);
