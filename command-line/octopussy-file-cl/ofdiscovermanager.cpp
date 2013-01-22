@@ -33,7 +33,8 @@ void OFDiscoverManager::updateState(){
     int countL,countR;
     countL=left.getCountFile();
     countR=right.getCountFile();
-    cout << "Nombre d'élément dans le dossier source : "<<countL<<" Nombre d'élément dans le dossier de recherche : "<<countR<<endl;
+    system("cls");
+    cout << "Nombre d'élément dans le dossier source : "<<countL<<endl<<"Nombre d'élément dans le dossier de recherche : "<<countR<<endl;
     if(left.isFinished() && right.isFinished()){
         t.stop();
         exit(0);
@@ -46,4 +47,8 @@ void OFDiscoverManager::leftFinished(){
 
 void OFDiscoverManager::rightFinished(){
     cout<<"La liste des fichiers cibles est terminée. Il y a " << right.getCountFile() << " fichier(s)."<<endl;
+}
+
+void OFDiscoverManager::setProcCount(int proc){
+    this->nbProc=proc;
 }

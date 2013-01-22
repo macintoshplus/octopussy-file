@@ -14,12 +14,14 @@ class OFDiscoverManager : public QObject
     QString pathLeft;
     QString pathRight;
     QTimer t;
+    int nbProc;
 
 public:
     explicit OFDiscoverManager(QObject *parent = 0);
     void setPathLeft(QString path);
     void setPathRight(QString path);
     void launchDiscover();
+    void setProcCount(int proc);
 
 signals:
     
