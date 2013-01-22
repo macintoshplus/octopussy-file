@@ -34,6 +34,11 @@ void OFDiscover::setNotDiscodeFolder(){
     this->discoveFolder=false;
 }
 
+QList<OFFile> OFDiscover::getFileList(){
+    QMutexLocker locker(&mutex);
+    return this->file;
+}
+
 void OFDiscover::run(){
     forever{
 

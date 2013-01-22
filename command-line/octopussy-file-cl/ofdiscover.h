@@ -22,6 +22,7 @@ public:
     int getCountFile();
     void setNotDiscodeFile();
     void setNotDiscodeFolder();
+    QList<OFFile> getFileList();
 
 protected:
     void run();
