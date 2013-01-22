@@ -15,4 +15,10 @@ CONFIG   -= app_bundle
 TEMPLATE = app
 
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    offile.cpp \
+    ofdiscover.cpp
+
+HEADERS += \
+    offile.h \
+    ofdiscover.h
