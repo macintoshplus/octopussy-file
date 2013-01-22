@@ -1,14 +1,15 @@
 #include <QCoreApplication>
 #include <QtCore>
 #include <iostream>
+#include "ofdiscovermanager.h"
 
 using namespace std;
 
-void help(char * app){
+void help(QString s){
     cout << "Octopussy File" << endl;
     cout << "Ecrit par Jean-Baptiste Nahan.\t\t22 Janvier 2013" << endl << endl;
     cout << "Ce logiciel est livré \"TEL QUEL\". Vous l'utilisez à vos risques et périls." << endl << endl;
-    QString s(app);
+    //QString s(app);
     QFileInfo i(s);
     cout << i.fileName().toStdString() << " -h -d -f -c:d|n|s -l path -r path" << endl << endl;
     cout << "-h\tAffiche cette aide." << endl;
@@ -33,12 +34,67 @@ void help(char * app){
 int main(int argc, char *argv[])
 {
     cout << "*** NB Arg : " << argc << endl << endl;
-    if(argc>1 && QString("%1").arg(argv[1])=="-h"){
+    /*if(argc>1 && QString("%1").arg(argv[1])=="-h"){
         help(argv[0]);
         exit(0);
-    }
+    }*/
 
     QCoreApplication a(argc, argv);
+
+    QStringList args=a.arguments();
+
+    if (args.count()>1 && args.contains("-h")){
+        help(args.at(0));
+        return 0;
+    }
+
+    if(!args.contains("-l")){
+        cerr << "argument -l manquant !" << endl;
+        help(args.at(0));
+        return 1;
+    }
+
+    if(!args.contains("-r")){
+        cerr << "argument -r manquant !" << endl;
+        help(args.at(0));
+        return 1;
+    }
+
+    QString pathL=args.at(args.indexOf("-l")+1);
+    QString pathR=args.at(args.indexOf("-r")+1);
+
+    if(pathL==pathR){
+        cerr << "Les deux chemins sont identiques. Traitement impossible!" << endl;
+        return 1;
+    }
+
+    if(!QFileInfo(pathL).exists()){
+        cerr << "Le chemin du dossier source est inexistant : " << pathL.toStdString() << endl;
+        return 1;
+    }
+
+    if(!QFileInfo(pathR).exists()){
+        cerr << "Le chemin du dossier de recherche est inexistant : " << pathR.toStdString() << endl;
+        return 1;
+    }
+
+    if(pathL.startsWith(pathR, Qt::CaseInsensitive)){
+        cerr << "Le dossier source ne peut pas être un parent du dossier de recherche!" << endl;
+        return 1;
+    }
+
+    if(pathR.startsWith(pathL, Qt::CaseInsensitive)){
+        cerr << "Le dossier de recherche ne peut pas être un parent du dossier source." << endl;
+        return 1;
+    }
+
+    OFDiscoverManager m;
+    m.setPathLeft(pathL);
+    m.setPathRight(pathR);
     
+    m.launchDiscover();
+
+    //return 0;
+
     return a.exec();
 }
