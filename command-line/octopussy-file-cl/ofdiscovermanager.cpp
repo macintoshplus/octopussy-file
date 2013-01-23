@@ -37,7 +37,23 @@ void OFDiscoverManager::updateState(){
     cout << "Nombre d'élément dans le dossier source : "<<countL<<endl<<"Nombre d'élément dans le dossier de recherche : "<<countR<<endl;
     if(left.isFinished() && right.isFinished()){
         t.stop();
-        exit(0);
+        cout<<"La recherche est terminée, la comparaison va commencer..."<<endl;
+        //exit(0);
+        //Transfer des fichiers
+        cout<<"Transfert des fichiers à rechercher..."<<endl;
+        QList<OFFile> fLeft = left.getFileList();
+        foreach(OFFile f1Left,fLeft){
+            cManager.addFiles(f1Left);
+        }
+
+        cout<<"Transfert des fichiers de comparaison..."<<endl;
+        QList<OFFile> fRight = right.getFileList();
+        foreach(OFFile f1Right,fRight){
+            cManager.addFindFiles(f1Right);
+        }
+        cout<<"Fin des transferts, début de la comparaison..."<<endl;
+        //Langement du traitement
+        cManager.launchThread();
     }
 }
 
@@ -51,4 +67,5 @@ void OFDiscoverManager::rightFinished(){
 
 void OFDiscoverManager::setProcCount(int proc){
     this->nbProc=proc;
+    this->cManager.initThread(proc);
 }

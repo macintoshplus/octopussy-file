@@ -19,10 +19,12 @@ SOURCES += main.cpp \
     offile.cpp \
     ofdiscover.cpp \
     ofdiscovermanager.cpp \
-    ofcompar.cpp
+    ofcompar.cpp \
+    ofcomparmanager.cpp
 
 HEADERS += \
     offile.h \
     ofdiscover.h \
     ofdiscovermanager.h \
-    ofcompar.h
+    ofcompar.h \
+    ofcomparmanager.h

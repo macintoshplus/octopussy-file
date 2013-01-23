@@ -5,6 +5,7 @@
 #include <QtCore>
 #include "ofdiscover.h"
 #include "offile.h"
+#include "ofcomparmanager.h"
 
 class OFDiscoverManager : public QObject
 {
@@ -15,6 +16,7 @@ class OFDiscoverManager : public QObject
     QString pathRight;
     QTimer t;
     int nbProc;
+    OFComparManager cManager;
 
 public:
     explicit OFDiscoverManager(QObject *parent = 0);

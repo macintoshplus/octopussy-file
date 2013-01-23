@@ -57,7 +57,7 @@ void OFDiscover::run(){
         //Traitement d'un dossier
         QString p=this->pathFolder.dequeue();
         this->mutex.unlock();
-        cout << "Tratement chemin : " << qPrintable(p) <<endl;
+        //cout << "Tratement chemin : " << qPrintable(p) <<endl;
         //Parcour du dossier
         QDir dir(p);
 

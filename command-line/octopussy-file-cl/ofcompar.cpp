@@ -1,14 +1,38 @@
 #include "ofcompar.h"
+#include "ofcomparmanager.h"
 
 OFCompar::OFCompar(QObject *parent) :
     QThread(parent)
 {
+    this->setTerminationEnabled(true);
+}
+
+void OFCompar::setNumber(int i){
+    QWriteLocker locker(&rLock);
+    this->tNumber=i;
+}
+
+int OFCompar::getNumber(){
+    QReadLocker locker(&rLock);
+    return this->tNumber;
 }
 
 void OFCompar::addFileFind(OFFile f){
     QMutexLocker locker(&mutex);
-    this->compare.enqueue();
+    this->compare.enqueue(f);
     if(!isRunning()) start();
+}
+
+OFFile OFCompar::getLastCompared(){
+    rLock.lockForWrite();
+    OFFile f=fichierComparer.dequeue();
+    rLock.unlock();
+    return f;
+}
+
+bool OFCompar::hasLastCompared(){
+    QReadLocker lok(&rLock);
+    return (!fichierComparer.isEmpty());
 }
 
 void OFCompar::run(){
@@ -21,34 +45,54 @@ void OFCompar::run(){
         }
         f=compare.dequeue();
         mutex.unlock();
-
-        QFileInfo fi(f.getPath());
-        if(!fi.exists()){
+        //cout<<"Fichier en cours de traitement : "<<qPrintable(f.baseName)<<endl;
+        //QFileInfo fi(f.getPath());
+        if(!f.exist){
             f.setCompared();
-            emit fileCompared(f);
+            rLock.lockForWrite();
+            fichierComparer.enqueue(f);
+            rLock.unlock();
+            //cout << "Thread "<< this->tNumber <<" : Fin comparaison - abs"<< endl;
+            emit fileCompared();
         }
-        int max = this->parent()->getFindMax();
-        for(int i;i<max;i++){
+        QObject * obj = this->parent();
+        OFComparManager * objCasted = qobject_cast<OFComparManager*>(obj);
+        if(!objCasted) cerr<<"************************************** CAST ERROR ***************************************";
+        int max = objCasted->getFindMax();
+        //cout<<"Max base find : "<<max<<endl;
+        for(int i=0;i<max;i++){
+            //cout<<"I="<<i;
             int sameFile=0;
-            OFFile fF = this->parent()->getFindAt(i);
-            QFileInfo fiF(fF);
-            if(!fiF.exists()) continue;
-            if(fiF.fileName()==fi.fileName()){
+            OFFile fF = objCasted->getFindAt(i);
+            //cout<<"Comparer à : "<<qPrintable(fF.baseName);
+            //QFileInfo fiF(fF.getPath());
+            if(!fF.exist){
+                cout<<"Existe pas !"<<endl;
+                continue;
+            }
+            //cout<<"fF="<<qPrintable(fF.baseName)<<" f="<<qPrintable(f.baseName)<<endl;
+            if(fF.baseName==f.baseName){
                 sameFile=sameFile|OF_SAME_NAME;
             }
-            if(fiF.size()==fi.size()){
+            if(fF.size==f.size){
                 sameFile=sameFile|OF_SAME_SIZE;
             }
-            if(fiF.lastModified()==fi.lastModified()){
+            if(fF.modify==f.modify){
                 sameFile=sameFile|OF_SAME_DATE;
             }
             //Ajoute le fichier comme semblable si
             // supérieur à zéro et non paire.
             if(sameFile>0 && sameFile%2!=0)
-            f.addSame(fF.path,sameFile);
+            f.addSame(fF.getPath(),sameFile);
         }
+        //cout<<"Fin compare !"<<endl;
         //Fichier traité
-        emit fileCompared(f);
+        f.setCompared();
+        rLock.lockForWrite();
+        fichierComparer.enqueue(f);
+        rLock.unlock();
+        //cout << "Thread "<< this->tNumber <<" : Fin comparaison"<< endl;
+        emit fileCompared();
     }
 
 

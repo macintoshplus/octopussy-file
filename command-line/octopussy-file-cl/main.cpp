@@ -33,6 +33,7 @@ void help(QString s){
 
 int main(int argc, char *argv[])
 {
+
     cout << "*** NB Arg : " << argc << endl << endl;
     /*if(argc>1 && QString("%1").arg(argv[1])=="-h"){
         help(argv[0]);
@@ -100,18 +101,20 @@ int main(int argc, char *argv[])
         if(env.startsWith("PROCESSOR_ARCHITECTURE=")) arch=env.split("=").at(1);
         if(env.startsWith("USERNAME=")) user=env.split("=").at(1);
     }
-
+    //nbproc="1";
     if(nbproc.toInt()==0){
         cerr<<"Impossible de déterminer le nombre de processeur..."<<endl;
         return 1;
     }
     cout<<"Votre ordinateur contien "<<qPrintable(nbproc)<<" processeur(s). Ils seront utilisés pour la recherche des fichiers."<<endl;
+
+    OFDiscoverManager m;
+    m.setProcCount(nbproc.toInt());
+
     cout<<"Appuyez sur ENTREE pour continuer..."<<endl;
     cout.flush();
     cin.ignore(100000,'\n');
 
-    OFDiscoverManager m;
-    m.setProcCount(nbproc.toInt());
 
     m.setPathLeft(pathL);
     m.setPathRight(pathR);

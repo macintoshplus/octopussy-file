@@ -6,6 +6,9 @@ OFFile::OFFile()
 {
     this->path="";
     this->compared=false;
+    baseName="";
+    size=0;
+    exist=false;
 }
 
 
@@ -31,9 +34,24 @@ void OFFile::addSame(QString path, int same)
 
 }
 
+int OFFile::sameCount(){
+    return sameList.count();
+}
+
+QList<OFSameFile> OFFile::getSame(){
+    return sameList;
+}
+
 void OFFile::setPath(QString path)
 {
     this->path=path;
+    QFileInfo info(path);
+    exist=info.exists();
+    if(exist){
+        baseName=info.fileName();
+        modify=info.lastModified();
+        size=info.size();
+    }
 }
 
 QString OFFile::getPath()
