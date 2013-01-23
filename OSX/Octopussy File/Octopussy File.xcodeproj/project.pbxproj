@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E310A4816AFB9EF00B47E3B /* OFNFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E310A4716AFB9EF00B47E3B /* OFNFile.m */; };
+		2E310A4B16AFBEB200B47E3B /* OFNDiscover.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E310A4A16AFBEB200B47E3B /* OFNDiscover.m */; };
 		2EC900C416AF003C00DDDAF2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC900C316AF003C00DDDAF2 /* Cocoa.framework */; };
 		2EC900CE16AF003C00DDDAF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EC900CC16AF003C00DDDAF2 /* InfoPlist.strings */; };
 		2EC900D016AF003C00DDDAF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC900CF16AF003C00DDDAF2 /* main.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E310A4616AFB9EF00B47E3B /* OFNFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OFNFile.h; path = Class/OFNFile.h; sourceTree = "<group>"; };
+		2E310A4716AFB9EF00B47E3B /* OFNFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OFNFile.m; path = Class/OFNFile.m; sourceTree = "<group>"; };
+		2E310A4916AFBEB200B47E3B /* OFNDiscover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OFNDiscover.h; path = Class/OFNDiscover.h; sourceTree = "<group>"; };
+		2E310A4A16AFBEB200B47E3B /* OFNDiscover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OFNDiscover.m; path = Class/OFNDiscover.m; sourceTree = "<group>"; };
 		2EC900BF16AF003C00DDDAF2 /* Octopussy File.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Octopussy File.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC900C316AF003C00DDDAF2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2EC900C616AF003C00DDDAF2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -83,6 +89,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E310A4416AFB9B100B47E3B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				2E310A4616AFB9EF00B47E3B /* OFNFile.h */,
+				2E310A4716AFB9EF00B47E3B /* OFNFile.m */,
+				2E310A4916AFBEB200B47E3B /* OFNDiscover.h */,
+				2E310A4A16AFBEB200B47E3B /* OFNDiscover.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
 		2EC900B416AF003C00DDDAF2 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +142,7 @@
 		2EC900C916AF003C00DDDAF2 /* Octopussy File */ = {
 			isa = PBXGroup;
 			children = (
+				2E310A4416AFB9B100B47E3B /* Class */,
 				2EC900FA16AF0F3600DDDAF2 /* Imgs */,
 				2EC900F716AF00BE00DDDAF2 /* Octopussy File.entitlements */,
 				2EC900D516AF003C00DDDAF2 /* OFNAppDelegate.h */,
@@ -294,6 +312,8 @@
 			files = (
 				2EC900D016AF003C00DDDAF2 /* main.m in Sources */,
 				2EC900D716AF003C00DDDAF2 /* OFNAppDelegate.m in Sources */,
+				2E310A4816AFB9EF00B47E3B /* OFNFile.m in Sources */,
+				2E310A4B16AFBEB200B47E3B /* OFNDiscover.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +519,7 @@
 				2EC900F316AF003D00DDDAF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EC900F416AF003D00DDDAF2 /* Build configuration list for PBXNativeTarget "Octopussy FileTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +528,7 @@
 				2EC900F616AF003D00DDDAF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
