@@ -67,7 +67,7 @@ void OFCompar::run(){
             //cout<<"Comparer à : "<<qPrintable(fF.baseName);
             //QFileInfo fiF(fF.getPath());
             if(!fF.exist){
-                cout<<"Existe pas !"<<endl;
+                //cout<<"Existe pas !"<<endl;
                 continue;
             }
             //cout<<"fF="<<qPrintable(fF.baseName)<<" f="<<qPrintable(f.baseName)<<endl;

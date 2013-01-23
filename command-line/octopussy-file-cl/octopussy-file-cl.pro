@@ -27,4 +27,8 @@ HEADERS += \
     ofdiscover.h \
     ofdiscovermanager.h \
     ofcompar.h \
-    ofcomparmanager.h
+    ofcomparmanager.h \
+    version.h
+
+
+RC_FILE = resources.rc
